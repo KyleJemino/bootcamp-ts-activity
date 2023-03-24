@@ -1,5 +1,10 @@
 import PetItem from './PetItem'
-const PetList = ({ pets }) => {
+import { PetType } from '../types'
+
+type Props = {
+  pets: PetType[]
+}
+const PetList = ({ pets }: Props): JSX.Element => {
   return (
     <>
       {pets.map(({ name, age, owner }) => ( 
