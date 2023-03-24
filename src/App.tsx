@@ -1,38 +1,38 @@
-import React, { useState } from 'react';
-import PetList from './components/PetList'
-import ToggleButton from './components/ToggleButton'
-import './App.css';
+import React, { useState } from "react";
+import PetList from "./components/PetList";
+import ToggleButton from "./components/ToggleButton";
+import "./App.css";
 
 const App = () => {
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
   const pets = [
-    { 
+    {
       name: "Doge",
       age: 1,
-      owner: "JOhn"
+      owner: "JOhn",
     },
     {
       name: "Nyan Cat",
-      age: 2
+      age: 2,
     },
     {
       name: "Piggy",
-      owner: "Jane"
-    }
-  ]
+      owner: "Jane",
+    },
+  ];
 
   return (
     <div className="App">
-      <div className='container'>
+      <div className="container">
         <ToggleButton
           state={show}
           setState={setShow}
-          buttonText={show ? 'hide' : 'show'}
+          buttonText={show ? "hide" : "show"}
         />
-        { show && (
+        {show && (
           <>
             <h1>Pets</h1>
-              <table>
+            <table>
               <tr>
                 <th>Name</th>
                 <th>Age</th>
@@ -45,6 +45,6 @@ const App = () => {
       </div>
     </div>
   );
-}
+};
 
 export default App;
