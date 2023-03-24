@@ -2,8 +2,8 @@ import PetItem from './PetItem';
 
 type PetsType = {
   name: string;
-  age: number;
-  owner: string;
+  age?: number;
+  owner?: string;
 };
 
 type PetList = {
