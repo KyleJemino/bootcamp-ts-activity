@@ -1,38 +1,44 @@
 import React, { useState } from 'react';
-import PetList from './components/PetList'
-import ToggleButton from './components/ToggleButton'
+import PetList from './components/PetList';
+import ToggleButton from './components/ToggleButton';
 import './App.css';
 
+type PetsType = {
+  name: string;
+  age?: number;
+  owner?: string;
+};
+
 const App = () => {
-  const [show, setShow] = useState(false)
-  const pets = [
-    { 
-      name: "Doge",
+  const [show, setShow] = useState(false);
+  const pets: PetsType[] = [
+    {
+      name: 'Doge',
       age: 1,
-      owner: "JOhn"
+      owner: 'JOhn',
     },
     {
-      name: "Nyan Cat",
-      age: 2
+      name: 'Nyan Cat',
+      age: 2,
     },
     {
-      name: "Piggy",
-      owner: "Jane"
-    }
-  ]
+      name: 'Piggy',
+      owner: 'Jane',
+    },
+  ];
 
   return (
     <div className="App">
-      <div className='container'>
+      <div className="container">
         <ToggleButton
           state={show}
           setState={setShow}
           buttonText={show ? 'hide' : 'show'}
         />
-        { show && (
+        {show && (
           <>
             <h1>Pets</h1>
-              <table>
+            <table>
               <tr>
                 <th>Name</th>
                 <th>Age</th>
@@ -45,6 +51,6 @@ const App = () => {
       </div>
     </div>
   );
-}
+};
 
 export default App;
