@@ -4,7 +4,7 @@ import ToggleButton from './components/ToggleButton'
 import './App.css';
 
 const App = () => {
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState<boolean>(false)
   const pets = [
     { 
       name: "Doge",

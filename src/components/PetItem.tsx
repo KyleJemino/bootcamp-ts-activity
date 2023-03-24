@@ -1,4 +1,6 @@
-const PetItem = ({name, age, owner}) => {
+import { PetType } from '../types'
+
+const PetItem = ({name, age, owner}: PetType): JSX.Element => {
   return (
     <tr>
       <td>{name}</td>
