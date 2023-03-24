@@ -1,15 +1,7 @@
-const ToggleButton = ({
-  buttonText,
-  state,
-  setState
-}) => {
-  return (
-    <button
-      onClick={() => setState(state)}
-    >
-      {buttonText}
-    </button>
-  )
-}
+type ToggleButtonType = { buttonText: string; state: boolean; setState: any };
 
-export default ToggleButton
+const ToggleButton = ({ buttonText, state, setState }: ToggleButtonType) => {
+  return <button onClick={() => setState(!state)}>{buttonText}</button>;
+};
+
+export default ToggleButton;
