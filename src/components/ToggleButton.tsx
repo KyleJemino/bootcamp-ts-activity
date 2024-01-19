@@ -7,7 +7,7 @@ const ToggleButton = ({
 }: Button) => {
   return (
     <button
-      onClick={() => setState(state)}
+      onClick={() => setState(!state)}
     >
       {buttonText}
     </button>
