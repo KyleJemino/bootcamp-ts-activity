@@ -1,25 +1,28 @@
 import React, { useState } from 'react';
-import PetList from './components/PetList'
-import ToggleButton from './components/ToggleButton'
+// import PetItem from './components/PetItem';
+import PetList from './components/PetList';
+import ToggleButton from './components/ToggleButton';
 import './App.css';
 
-const App = () => {
-  const [show, setShow] = useState(false)
+const App: React.FC = () => {
+  const [show, setShow] = useState(false);
   const pets = [
-    { 
+    {
       name: "Doge",
       age: 1,
-      owner: "JOhn"
+      owner: "John",
     },
     {
       name: "Nyan Cat",
-      age: 2
+      age: 2,
+      owner: "", 
     },
     {
       name: "Piggy",
-      owner: "Jane"
-    }
-  ]
+      age: 0, 
+      owner: "Jane",
+    },
+  ];
 
   return (
     <div className="App">
@@ -32,13 +35,17 @@ const App = () => {
         { show && (
           <>
             <h1>Pets</h1>
-              <table>
-              <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Owner</th>
-              </tr>
-              <PetList pets={pets} />
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Owner</th>
+                </tr>
+              </thead>
+              <tbody>
+                <PetList pets={pets} />
+              </tbody>
             </table>
           </>
         )}
