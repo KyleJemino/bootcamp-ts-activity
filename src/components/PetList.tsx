@@ -1,5 +1,7 @@
 import PetItem from './PetItem'
-const PetList = ({ pets }) => {
+import { PetListProps } from './types'
+
+const PetList = ({ pets }: PetListProps) => {
   return (
     <>
       {pets.map(({ name, age, owner }) => ( 

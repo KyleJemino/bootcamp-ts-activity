@@ -1,4 +1,6 @@
-const PetItem = ({name, age, owner}) => {
+import { PetItemProps } from '../components/types'
+
+const PetItem = ({name, age, owner}: PetItemProps) => {
   return (
     <tr>
       <td>{name}</td>
