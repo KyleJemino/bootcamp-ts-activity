@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import PetList from './components/PetList'
 import ToggleButton from './components/ToggleButton'
 import './App.css';
+import { Pet } from './types';
 
 const App = () => {
   const [show, setShow] = useState(false)
-  const pets = [
+  const pets: Pet[] = [
     { 
       name: "Doge",
       age: 1,

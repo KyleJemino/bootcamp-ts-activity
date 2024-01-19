@@ -1,4 +1,6 @@
-const PetItem = ({name, age, owner}) => {
+import { Pet } from "../types"
+
+const PetItem = ({name, age, owner}: Pet) => {
   return (
     <tr>
       <td>{name}</td>

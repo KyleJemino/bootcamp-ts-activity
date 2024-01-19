@@ -1,8 +1,10 @@
+import { Button } from "../types"
+
 const ToggleButton = ({
   buttonText,
   state,
   setState
-}) => {
+}: Button) => {
   return (
     <button
       onClick={() => setState(state)}
