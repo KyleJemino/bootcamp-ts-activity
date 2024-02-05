@@ -1,8 +1,10 @@
+import { Pet } from '../types'
 import PetItem from './PetItem'
-const PetList = ({ pets }) => {
+
+const PetList = ({ pets }: { pets: Pet[] }) => {
   return (
     <>
-      {pets.map(({ name, age, owner }) => ( 
+      {pets.map(({ name, age, owner }: Pet) => ( 
         <PetItem 
           name={name}
           age={age}
